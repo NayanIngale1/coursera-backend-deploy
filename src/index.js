@@ -11,7 +11,7 @@ app.use(cors());
 
 const courseController = require("./controllers/course.controller");
 
-const findByDurationController = require("./controllers/findByDuration.controller.js");
+const findByDurationController = require("./controllers/FindByDuration.controller");
 
 app.use("/courses", courseController);
 app.use("/courses/duration", findByDurationController);

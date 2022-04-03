@@ -30,7 +30,7 @@ let user= await User.findOne({email:value}).lean().exec()
             to:user.email,
             subject: "Coursera Password Reset", // Subject line
             text: "Hi "+user.username+", OTP to reset the password is 123456",
-            html:{path:"mail.html"}, // html body
+            // html:{path:"mail.html"}, // html body
           });
           return res.status(200).send({message:"Please enter OTP sent on registered email", userId:user._id})
     } catch (error) {
